@@ -5,19 +5,14 @@ class ProductManager {
     }
   
     addProduct(product) {
-      // Validar que todos los campos sean obligatorios
       if (!product.title || !product.description || !product.price || !product.thumbnail || !product.code || !product.stock) {
         console.error("Todos los campos son obligatorios.");
         return;
       }
-  
-      // Validar que no se repita el campo "code"
       if (this.products.some(existingProduct => existingProduct.code === product.code)) {
         console.error("Ya existe un producto con el mismo código.");
         return;
       }
-  
-      // Agregar el producto al arreglo
       const newProduct = {
         id: this.nextProductId++,
         title: product.title,
@@ -45,9 +40,7 @@ class ProductManager {
         console.error("Producto no encontrado");
       }
     }
-  }
-  
-  // Ejemplo de uso
+  }git 
   const productManager = new ProductManager();
   
   productManager.addProduct({
