@@ -40,7 +40,7 @@ class ProductManager {
         console.error("Producto no encontrado");
       }
     }
-  }git 
+  }
   const productManager = new ProductManager();
   
   productManager.addProduct({
